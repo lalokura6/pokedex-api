@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="style.css"/>
+    <!-- <link rel="stylesheet" href="/src/css/normalize.css"/> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <a href="index.html"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"></a>
+    <title>Pokédex API</title>
+  </head>
+  <body>
+    <div class="contenedor">
+      <header>
+        <nav class="nav">
+          <img class="logo" src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="logo Pokédex">
+          
+          <div class="busqueda">
+            <input type="text" class="buscar" id="pokemonBuscar" placeholder="Buscar Pokémon por nombre o número">
+            <button class="btn-buscar" id="botonBuscar">Buscar</button>
+          </div>
+        </nav>
+        
+      </header>
+
+      <main>
+        
+          <section class="pokemon-todos" id="listaPokemon">
+            
+          </section>
+
+      </main>
+
+      <footer><p>Pokédex API - Diplomado Desarrollo Full-Stack - 2024</p></footer>
+
+    </div> 
+    
+
+    <div id="app"></div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
+
+  

@@ -1,0 +1,225 @@
+* {
+  margin:0; 
+  padding:0;
+  box-sizing: border-box;
+}
+.contenedor {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+body {
+  background-color: rgba(207, 207, 207, 0.862);
+}
+img {
+  max-width: 200px;
+  margin: 10px 0 10px 0;
+}
+p {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+header {
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  background: rgba(183, 211, 84, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+header h1 {
+  color: beige;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+}
+.logo {
+  max-width: 150px;
+  display: flex;
+}
+
+main {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  font-size: 1.4rem;
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.pokemon-todos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+}
+@media screen and (min-width: 640px) {
+  .pokemon-todos {
+    grid-template-columns: 1fr 1fr;
+  }
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .busqueda {
+    max-width: 40%;
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 960px) {
+  .pokemon-todos {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .busqueda {
+    display: flex;
+    flex-direction: row;
+  }
+  .buscar {
+    max-width: 70%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .pokemon-todos {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .busqueda {
+    display: flex;
+    flex-direction: row;
+  }
+  .buscar {
+    max-width: 70%;
+  }
+}
+.busqueda {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-bottom: 10px;
+}
+.btn-buscar {
+  width: 30%;
+  margin: 10px auto 0 0;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  color: rgb(72, 76, 122);
+  font-size: 14px;
+  text-align: center;
+  height: 38px;
+  padding: 8px 24px;
+  border-radius: 50px;
+  background-image: linear-gradient(180deg, #fff, #f5f5fa);
+  box-shadow: 0 4px 11px 0 rgb(37 44 97 / 15%),
+    0 1px 3px 0 rgb(93 100 148 / 20%);
+  transition: all 0.2s ease-out;
+  :hover {
+    box-shadow: 0 8px 22px 0 rgb(37 44 97 / 15%),
+      0 4px 6px 0 rgb(93 100 148 / 20%);
+  }
+}
+
+.buscar {
+  width: 80%;
+  margin: 10px 0 0px;
+  padding: 7px;
+  border-radius: 6px;
+  font-size: 16px;
+  background: #fff4f4;
+  border: 2px solid transparent;
+  height: 36px;
+  box-shadow: 0 0 0 1px #dddddd, 0 2px 4px 0 rgb(0 0 0 / 7%),
+    0 1px 1.5px 0 rgb(0 0 0 / 5%);
+  :focus {
+    border: 2px solid #000;
+    border-radius: 4px;
+  }
+}
+
+.pokemon {
+  border-radius: 1rem;
+  background: rgba(244, 244, 134, 0.462);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding-block: 1rem;
+  padding-inline: 25px;
+  text-transform: uppercase;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.pokemon:hover {
+  box-shadow: 10px 10px 0 rgb(93, 130, 141), 20px 20px 0 rgb(118, 152, 153),
+    30px 30px 0 rgb(111, 171, 168);
+}
+.pokemon-imagen {
+  padding-inline: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.pokemon-imagen img {
+  width: 100%;
+  max-width: 8rem;
+}
+
+.pokemon-info {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 1rem;
+  align-items: center;
+  text-align: center;
+}
+.pokemon-nombre {
+  font-size: 1.4rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #657d93;
+}
+
+.pokemon-id {
+  font-size: 1rem;
+  margin: left;
+  width: 30px;
+  padding: 5px;
+  background-color: #1082d3;
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+footer {
+  display: grid;
+  font-family: 'Lato', sans-serif;
+  background: rgba(183, 211, 84, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  font-size: 1.3rem;
+  padding-block: 1rem;
+  justify-content: center;
+  
+}
+footer p {
+  font-size: 1rem;
+  color: rgb(147, 130, 77);
+}
