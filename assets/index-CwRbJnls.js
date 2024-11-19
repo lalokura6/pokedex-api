@@ -6,6 +6,6 @@
             <h2 class="pokemon-nombre">${e.name}</h2>
             <h2 class="pokemon-id">${e.id}</h2>
         </div>
-          `,c.append(r)}async function u(e){c.innerHTML="";try{const r=await fetch(a+e.toLowerCase());if(!r.ok)throw new Error("Pokémon no encontrado");const n=await r.json();l(n)}catch(r){c.innerHTML="<p>Pokémon no encontrado.</p>",console.error("Error en la búsqueda",r)}}document.querySelector("#botonBuscar").addEventListener("click",()=>{const e=document.querySelector("#pokemonBuscar").value;e?u(e):alert("Por favor, ingresa un ID o nombre de Pokémon.")});d();document.querySelector("#app").innerHTML=`
+          `,c.append(r)}async function u(e){c.innerHTML="";try{const r=await fetch(a+e.toLowerCase());if(!r.ok)throw new Error('"<h1 class"pokemon-nombre" >Pokémon no encontrado</h1>"');const n=await r.json();l(n)}catch(r){c.innerHTML="<p>Pokémon no encontrado.</p>",console.error("Error en la búsqueda",r)}}document.querySelector("#botonBuscar").addEventListener("click",()=>{const e=document.querySelector("#pokemonBuscar").value;e?u(e):alert("Por favor, ingresa un ID o nombre de Pokémon.")});d();document.querySelector("#app").innerHTML=`
 
 `;
