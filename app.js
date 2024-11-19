@@ -35,7 +35,7 @@
       listaPokemon.innerHTML = ''; // Limpiar lista de resultados anteriores //
       try {
         const response = await fetch(apiUrl + nombre.toLowerCase());
-        if (!response.ok) throw new Error("Pokémon no encontrado");
+        if (!response.ok) throw new Error(`"<h1 class"pokemon-nombre" >Pokémon no encontrado</h1>"`);
         const data = await response.json();
         mostrarPokemon(data);
       } catch (error) {

@@ -59,11 +59,25 @@ main {
 }
 .pokemon-todos {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 2rem;
 
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 320px) {
+  .pokemon-todos {
+    grid-template-columns: 1fr;
+  }
+  .buscar {
+    max-width: 70%;
+  }
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+}
+@media screen and (min-width: 576px) {
   .pokemon-todos {
     grid-template-columns: 1fr 1fr;
   }
@@ -78,8 +92,14 @@ main {
     display: flex;
     flex-direction: row;
   }
+  .pokemon-nombre {
+    font-size: 1.4rem;
+  }
+  .buscar {
+    max-width: 70%;
+  }
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 768px) {
   .pokemon-todos {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -91,16 +111,24 @@ main {
     max-width: 70%;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 992px) {
   .pokemon-todos {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   .busqueda {
     display: flex;
     flex-direction: row;
   }
   .buscar {
-    max-width: 70%;
+    max-width: 60%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .pokemon-todos {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .buscar {
+    max-width: 60%;
   }
 }
 .busqueda {
@@ -111,7 +139,7 @@ main {
   margin-bottom: 10px;
 }
 .btn-buscar {
-  width: 30%;
+  max-width: 40%;
   margin: 10px auto 0 0;
   display: inline-block;
   outline: 0;
@@ -167,8 +195,7 @@ main {
   transition: 0.5s;
 }
 .pokemon:hover {
-  box-shadow: 10px 10px 0 rgb(93, 130, 141), 20px 20px 0 rgb(118, 152, 153),
-    30px 30px 0 rgb(111, 171, 168);
+  box-shadow: 10px 10px 0 rgb(93, 130, 141);
 }
 .pokemon-imagen {
   padding-inline: 1rem;
@@ -189,12 +216,12 @@ main {
   text-align: center;
 }
 .pokemon-nombre {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-family: 'Lato', sans-serif;
   font-weight: 900;
   margin-top: 10px;
   margin-bottom: 10px;
-  color: #657d93;
+  color: #a3883e;
 }
 
 .pokemon-id {
@@ -202,7 +229,7 @@ main {
   margin: left;
   width: 30px;
   padding: 5px;
-  background-color: #1082d3;
+  background-color: #8a8d4a;
   border-radius: 50%;
   color: #ffffff;
 }
@@ -221,5 +248,5 @@ footer {
 }
 footer p {
   font-size: 1rem;
-  color: rgb(147, 130, 77);
+  color: #846e33;
 }
